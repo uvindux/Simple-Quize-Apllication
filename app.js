@@ -65,6 +65,35 @@ function loadtable() {
 let marks=0;
 let count = 0;
 let y = 0;
+document.getElementById("MSQ").innerHTML = `
+          
+          <h1> ${questions[count].question}</h1>
+          <label id="label1">
+    <input type="radio" id="${questions[count].id}" name="${questions[count].options[y]}" onchange="radioclick(this)">
+    
+    ${questions[count].options[y]}
+   
+     
+  </label><br>
+ <label id="label2">
+  <input type="radio" id="${questions[count].id}" name="${questions[count].options[y + 1]}" onchange="radioclick(this)">
+    ${questions[count].options[y + 1]}
+     
+  </label><br>
+ <label id="label3">
+  <input type="radio" id="${questions[count].id}" name="${questions[count].options[y + 2]}" onchange="radioclick(this)" >
+    ${questions[count].options[y + 2]}
+     
+  </label><br>
+ <label id="label4">
+  <input type="radio" id="${questions[count].id}" name="${questions[count].options[y + 3]}" onchange="radioclick(this)">
+    ${questions[count].options[y + 3]}
+     
+  </label><br>
+
+          `
+
+  count = count + 1;
 document.getElementById("btn1").onclick = function () {
 
   document.getElementById("MSQ").innerHTML = `
