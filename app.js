@@ -134,7 +134,11 @@ function radioclick(obj) {
   console.log(questions[parseInt(obj.id)-1]);
   
   if (obj.name == questions[parseInt(obj.id)-1].answer){
-    alert("Correct answer");
+   Swal.fire({
+  title: "Correct Answer!",
+  text: "You clicked the Correct Answer!",
+  icon: "success"
+});
     marks+=10;
     document.getElementById("Marks").innerHTML=`Current Marks : ${marks}`
     
@@ -142,7 +146,11 @@ function radioclick(obj) {
    
   }
   else {
-    alert("Wrong answer")
+    Swal.fire({
+  title: "Wrong answer",
+  text: "You clicked the Wrong answer!",
+  icon: "success"
+});
   }
   console.log(obj.id);
 
